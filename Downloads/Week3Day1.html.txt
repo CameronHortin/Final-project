@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Real Finances</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">For Real Finances</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="cards">
+        <div class="card">
+            <h2>Dashboard</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ipsum nec neque. In hac habitasse platea dictumst.</p>
+            <p>Maecenas et tortor ac felis sollicitudin ornare vitae vulputate tellus. Nam at arcu a ante vulputate hendrerit. Nam sit amet eros id orci blandit bibendum. Sed efficitur ultricies sem, ac interdum turpis molestie eget. Integer vitae mi gravida, feugiat lacus sed, lobortis ligula.</p>
+            <p>Quisque vehicula, ipsum id mollis consequat, nunc ex sollicitudin lectus, nec mollis dolor odio a purus. Aliquam ultrices ipsum ante, eget hendrerit dui malesuada, risus eros porta est, ut facilisis ligula arcu at dolor.</p>
+            <button>More Info</button>
+        </div>
+        <div class="card">
+            <h2>Budget</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ipsum nec neque. In hac habitasse platea dictumst.</p>
+            <p>Maecenas et tortor ac felis sollicitudin ornare vitae vulputate tellus. Nam at arcu a ante vulputate hendrerit. Nam sit amet eros id orci blandit bibendum. Sed efficitur ultricies sem, ac interdum turpis molestie eget. Integer vitae mi gravida, feugiat lacus sed, lobortis ligula.</p>
+            <p>Quisque vehicula, ipsum id mollis consequat, nunc ex sollicitudin lectus, nec mollis dolor odio a purus. Aliquam ultrices ipsum ante, eget hendrerit dui malesuada, risus eros porta est, ut facilisis ligula arcu at dolor.</p>
+            <button>More Info</button>
+        </div>
+        <div class="card">
+            <h2>Checkbooks</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ipsum nec neque. In hac habitasse platea dictumst.</p>
+            <p>Maecenas et tortor ac felis sollicitudin ornare vitae vulputate tellus. Nam at arcu a ante vulputate hendrerit. Nam sit amet eros id orci blandit bibendum. Sed efficitur ultricies sem, ac interdum turpis molestie eget. Integer vitae mi gravida, feugiat lacus sed, lobortis ligula.</p>
+            <p>Quisque vehicula, ipsum id mollis consequat, nunc ex sollicitudin lectus, nec mollis dolor odio a purus. Aliquam ultrices ipsum ante, eget hendrerit dui malesuada, risus eros porta est, ut facilisis ligula arcu at dolor.</p>
+            <button>More Info</button>
+        </div>
+        <div class="card">
+            <h2>Money</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ipsum nec neque. In hac habitasse platea dictumst.</p>
+            <p>Maecenas et tortor ac felis sollicitudin ornare vitae vulputate tellus. Nam at arcu a ante vulputate hendrerit. Nam sit amet eros id orci blandit bibendum. Sed efficitur ultricies sem, ac interdum turpis molestie eget. Integer vitae mi gravida, feugiat lacus sed, lobortis ligula.</p>
+            <p>Quisque vehicula, ipsum id mollis consequat, nunc ex sollicitudin lectus, nec mollis dolor odio a purus. Aliquam ultrices ipsum ante, eget hendrerit dui malesuada, risus eros porta est, ut facilisis ligula arcu at dolor.</p>
+            <button>More Info</button>
+        </div>
+    </section>
+</body>
+</html>
