@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+ <html lang="en"> 
+<head>
+ 		<meta charset="UTF-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Comment Section</title>
+ <link rel="stylesheet" href="styles.css">
+ </head>
+ 	<body>
+ 		<div id="original-post">
+ <h2>WhySoSerious45</h2>
+ <p>Trying to decide a career path? Programming is the move. Change my mind.</p> 
+</div> 
+<div id="comments-container"></div> 
+<div id="comment-form">
+ 		<input type="text" id="display-name" placeholder="Display Name">
+ <input type="text" id="comment-text" placeholder="Comment">
+ 		<button id="submit-comment">Submit</button>
+ 		</div> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="script.js"></script> 
+</body>
+ </html>
+CSS
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#original-post {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+#comments-container {
+    margin-top: 120px;
+    padding: 20px;
+}
+
+.comment {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.comment .comment-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.comment .comment-actions button {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#comment-form {
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+#comment-form input {
+    margin-right: 10px;
+    padding: 5px;
+    flex: 1;
+}
+
+#comment-form button {
+    padding: 5px 10px;
+}
+Java
+$(document).ready(function() {
+    // Function to add a new comment
+    function addComment(displayName, commentText) {
+        const commentHtml = `
+            <div class="comment">
+                <strong>${displayName}</strong>
+                <p>${commentText}</p>
+                <div class="comment-actions">
+                    <button class="edit-comment">Edit</button>
+                    <button class="delete-comment">Delete</button>
+                </div>
+            </div>
+        `;
+        $('#comments-container').prepend(commentHtml);
+    }
+
+    // Submit comment
+    $('#submit-comment').click(function() {
+        const displayName = $('#display-name').val();
+        const commentText = $('#comment-text').val();
+
+        if (displayName && commentText) {
+            addComment(displayName, commentText);
+            $('#display-name').val('');
+            $('#comment-text').val('');
+        }
+    });
+
+    // Delegate click event for deleting a comment
+    $(document).on('click', '.delete-comment', function() {
+        $(this).closest('.comment').remove();
+    });
+
+    // Delegate click event for editing a comment
+    $(document).on('click', '.edit-comment', function() {
+        const commentDiv = $(this).closest('.comment');
+        const displayName = commentDiv.find('strong').text();
+        const commentText = commentDiv.find('p').text();
+
+        $('#display-name').val(displayName);
+        $('#comment-text').val(commentText);
+
+        commentDiv.remove();
+    });
+});
